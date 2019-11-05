@@ -14,11 +14,11 @@ export default class ListClientes extends Component {
     this.loadUsers();
   }
 
-  // componentDidUpdate(_, prevState) {
-  //   if (prevState.clientes !== this.state.clientes) {
-  //     this.loadUsers();
-  //   }
-  // }
+  componentDidUpdate(_, prevState) {
+    if (prevState.clientes !== this.state.clientes) {
+      this.loadUsers();
+    }
+  }
 
   loadUsers = async () => {
     const response = await api.get('/clientes');
