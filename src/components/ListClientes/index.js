@@ -22,7 +22,6 @@ export default class ListClientes extends Component {
 
   loadUsers = async () => {
     const response = await api.get('/clientes');
-
     this.setState({ clientes: response.data });
   };
 
